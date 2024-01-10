@@ -1,26 +1,88 @@
 public class ArrayOps {
     public static void main(String[] args) {
         
+        
     }
     
-    public static int findMissingInt (int [] array) {
-        // Write your code here:
-        return -1;
+    public static int findMissingInt (int[] array) {
+        int[] array2 = new int[array.length + 1];
+        int missing = 999;
+
+        for(int i = 0 ; i < array2.length; i++){
+            array2[i] = i;
+            }
+
+        for(int i = 0; i < array2.length; i++){
+            Boolean didFind = false;
+
+            for(int j = 0; j < array.length; j++){
+                if(array[j]==array2[i]){
+                    didFind = true;
+                    }
+
+                }
+                if(!didFind){
+                    missing = array2[i];
+                    break;
+                    }
+
+                }
+    return missing;
     }
 
     public static int secondMaxValue(int [] array) {
-        // Write your code here:
-        return 0;
+        int sec = 0;
+        int max = 0;
+        for(int i = 0; i < array.length; i++){
+
+            if(array[i] > max){ max = array[i]; }
+            if(array[i] > sec && array[i] < max){
+                sec = array[i];
+            }
+        }
+        return sec;
     }
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        // Write your code here:
-        return false;
+        
+        for(int i =0; i < array1.length; i++){
+            Boolean isContaining = false;
+            for(int j=0; j < array2.length; j++){
+                if(array1[i] == array2[j]){
+                    isContaining = true;
+                    break;
+                }
+            }
+            if(!isContaining){return false;}
+        }
+        return true;
     }
 
     public static boolean isSorted(int [] array) {
-        // Write your code here:
-        return false;
+        Boolean isSortedDecreasingly = true;
+        Boolean isSortedIncreasingly = true;
+        int min = array[0];
+        for(int i =0; i < array.length; i++){
+            if(array[i] >= min){
+                min = array[i];
+            }
+                else{
+                    isSortedIncreasingly = false;
+                }
+            
+        }
+
+        int max = array[0];
+        for(int i =0; i < array.length; i++){
+            if(array[i] <= max){
+                max = array[i];
+            }
+                else{
+                    isSortedDecreasingly = false;
+                }
+            
+        }
+        return (isSortedDecreasingly || isSortedIncreasingly);
     }
 
 }
