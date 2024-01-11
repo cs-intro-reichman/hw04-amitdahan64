@@ -22,7 +22,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String s = "one THree FouR";
+        String s = "One two tHRee world";
         System.out.println(capVowelsLowRest(s));
         
     }
@@ -51,7 +51,7 @@ public class StringOps {
                 }
                 else {
                     
-                    output = output + ((char)(string.charAt(i) + 32));
+                    output = output + string.charAt(i);
                 }
             }
             else{
@@ -104,6 +104,7 @@ public class StringOps {
                     i++;
                 }
             }
+
             else{
                 out = out + str.charAt(i);
             }
