@@ -22,12 +22,8 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String s = "Hello world";
-        int[] a = allIndexOf(s, 'l');
-        for(int i =0;i<a.length;i++){
-            System.out.println(a[i]);
-        }
-        System.out.println("finished");
+        String s = "one THree FouR";
+        System.out.println(capVowelsLowRest(s));
         
     }
     private static boolean isVowel(char ch){
@@ -54,11 +50,19 @@ public class StringOps {
                     output = output + ((char)(string.charAt(i) - 32));
                 }
                 else {
+                    
                     output = output + ((char)(string.charAt(i) + 32));
                 }
             }
             else{
-                output = output + string.charAt(i);
+                if(string.charAt(i) < 91 && string.charAt(i) > 64){
+                    output = output + ((char)(string.charAt(i) + 32));
+                }
+
+                else{
+                    output = output + string.charAt(i);
+                }
+                
             }
         }
         return output;
