@@ -26,6 +26,7 @@ public class StringOps {
         System.out.println(capVowelsLowRest(s));
         
     }
+    /* thank god! you are the first to do that, very good!*/
     private static boolean isVowel(char ch){
         //checking if the letter is vowel type
         if(ch == 'A' || ch == 'E' || ch == 'O' || ch == 'U' ||ch == 'I' || ch == 'a' || ch == 'o' || ch == 'u' || ch == 'e' || ch == 'i'){

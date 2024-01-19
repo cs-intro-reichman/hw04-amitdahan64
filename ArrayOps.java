@@ -6,7 +6,7 @@ public class ArrayOps {
     
     public static int findMissingInt (int[] array) {
         int[] array2 = new int[array.length + 1];
-        int missing = 999;
+        int missing = 999;// what? why? this value does not explain itself.
 
         for(int i = 0 ; i < array2.length; i++){
             array2[i] = i;
